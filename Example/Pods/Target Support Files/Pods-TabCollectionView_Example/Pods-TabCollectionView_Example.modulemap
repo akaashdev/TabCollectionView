@@ -1,0 +1,6 @@
+framework module Pods_TabCollectionView_Example {
+  umbrella header "Pods-TabCollectionView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

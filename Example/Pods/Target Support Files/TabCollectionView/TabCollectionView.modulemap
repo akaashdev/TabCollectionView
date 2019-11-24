@@ -1,0 +1,6 @@
+framework module TabCollectionView {
+  umbrella header "TabCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

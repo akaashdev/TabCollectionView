@@ -1,0 +1,16 @@
+PODS:
+  - TabCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - TabCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  TabCollectionView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TabCollectionView: e751e49adba4b878ad7fa272cea285374182050e
+
+PODFILE CHECKSUM: 143aea43d1ff2752b90c55bb38e3f78d7977f67a
+
+COCOAPODS: 1.8.4
