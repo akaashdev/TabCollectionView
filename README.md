@@ -1,6 +1,6 @@
 # TabCollectionView
 
-[![CI Status](https://img.shields.io/travis/heatblast.akaash@gmail.com/TabCollectionView.svg?style=flat)](https://travis-ci.org/heatblast.akaash@gmail.com/TabCollectionView)
+[![CI Status](https://img.shields.io/travis/akaashdev/TabCollectionView.svg?style=flat)](https://travis-ci.org/akaashdev/TabCollectionView)
 [![Version](https://img.shields.io/cocoapods/v/TabCollectionView.svg?style=flat)](https://cocoapods.org/pods/TabCollectionView)
 [![License](https://img.shields.io/cocoapods/l/TabCollectionView.svg?style=flat)](https://cocoapods.org/pods/TabCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/TabCollectionView.svg?style=flat)](https://cocoapods.org/pods/TabCollectionView)
@@ -22,7 +22,7 @@ pod 'TabCollectionView'
 
 ## Author
 
-heatblast.akaash@gmail.com, akaashdev.sc@zohocorp.com
+Akaash Dev, heatblast.akaash@gmail.com
 
 ## License
 
