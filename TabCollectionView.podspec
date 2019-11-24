@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TabCollectionView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TabCollectionView.'
+  s.summary          = 'A Light-weight Swift Library that mimics ViewPager of Android in iOS in the simplest and efficient way'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  A Light-weight Swift Library that mimics ViewPager of Android in iOS in the simplest and efficient way. TabCollectionView can be used like any other View of UIKit. It follows the same architecture and delegation pattern.
                        DESC
 
-  s.homepage         = 'https://github.com/heatblast.akaash@gmail.com/TabCollectionView'
+  s.homepage         = 'https://github.com/akaashdev/TabCollectionView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'heatblast.akaash@gmail.com' => 'akaashdev.sc@zohocorp.com' }
-  s.source           = { :git => 'https://github.com/heatblast.akaash@gmail.com/TabCollectionView.git', :tag => s.version.to_s }
+  s.author           = { 'Akaash Dev' => 'akaashdev.sc@zohocorp.com' }
+  s.source           = { :git => 'https://github.com/akaashdev/TabCollectionView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'TabCollectionView/Classes/**/*'
+  s.swift_version = '5.0'
   
   # s.resource_bundles = {
   #   'TabCollectionView' => ['TabCollectionView/Assets/*.png']
