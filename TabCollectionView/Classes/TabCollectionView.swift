@@ -159,6 +159,7 @@ public class TabCollectionView: UIView, UICollectionViewDelegateFlowLayout, UICo
     public func reloadLayout() {
         updateTabHeaderLayout()
         reloadTabIndicatorView()
+        updateHeaderViewWidthConstraint()
         setNeedsUpdateConstraints()
         layoutIfNeeded()
     }
@@ -342,6 +343,28 @@ public class TabCollectionView: UIView, UICollectionViewDelegateFlowLayout, UICo
         tabIndicatorView.frame.origin.y = tabHeaderHeight
     }
     
+    private func updateHeaderViewWidthConstraint() {
+        let contentWidth = calculateTabHeaderContentWidth()
+        let layoutGuideWidth = getLayoutGuide().layoutFrame.width
+        let calcWidth = contentWidth > layoutGuideWidth ? layoutGuideWidth : contentWidth
+        tabHeaderCollectionViewWidthConstraint?.constant = calcWidth
+    }
+    
+    private func calculateTabHeaderContentWidth() -> CGFloat {
+        let numberOfCells = self.numberOfItems
+        let contentInsets = self.tabHeaderCollectionView_.contentInset
+        
+        let totalPadding = contentInsets.right + contentInsets.left
+        let totalContentWidth = (0 ..< numberOfCells).reduce(0) { $0 + headerWidth(at: $1) }
+        
+        guard let flowLayout = tabHeaderCollectionView_.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return totalContentWidth + totalPadding
+        }
+        
+        let inBetweenSpace = flowLayout.minimumInteritemSpacing * CGFloat(numberOfCells - 1)
+        return totalContentWidth + totalPadding + inBetweenSpace
+    }
+    
     private func registerCellTypes() {
         guard let source = datasource else { return }
         headerCollectionView.register(source.tabHeaderCellType, forCellWithReuseIdentifier: kTabHeaderCellId)
@@ -469,13 +492,6 @@ public class TabCollectionView: UIView, UICollectionViewDelegateFlowLayout, UICo
         case .trailing: return getTrailingAlignedConstraints()
         case .right: return getRightAlignedConstraints()
         }
-    }
-    
-    private func updateHeaderViewWidthConstraint() {
-        let contentWidth = tabHeaderCollectionView_.contentSize.width
-        let layoutGuideWidth = getLayoutGuide().layoutFrame.width
-        let calcWidth = contentWidth > layoutGuideWidth ? layoutGuideWidth : contentWidth
-        tabHeaderCollectionViewWidthConstraint?.constant = calcWidth
     }
     
     private func getLeadingAlignedConstraints() -> [NSLayoutConstraint] {

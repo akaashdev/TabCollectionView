@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ViewCell: UICollectionViewCell {
+open class ViewCell: UICollectionViewCell {
     
-    weak var currentView: UIView?
-    weak var currentViewController: UIViewController?
+    open weak var currentView: UIView?
+    open weak var currentViewController: UIViewController?
     
-    override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         currentView?.removeFromSuperview()
     }
     
-    func setupCell(with viewController: UIViewController) {
+    open func setupCell(with viewController: UIViewController) {
         self.currentViewController = viewController
     }
     
-    func displayViewControllerWithAutoLayout(in parentController: UIViewController) {
+    open func displayViewControllerWithAutoLayout(in parentController: UIViewController) {
         
         guard let controller = currentViewController else {
             print("currentViewController is nil. Aborting displayViewController inside ViewCell.")
@@ -37,7 +37,7 @@ class ViewCell: UICollectionViewCell {
         
     }
     
-    func displayViewController(in parentController: UIViewController) {
+    open func displayViewController(in parentController: UIViewController) {
         
         guard let controller = currentViewController else {
             print("currentViewController is nil. Aborting displayViewController inside ViewCell.")
@@ -51,7 +51,7 @@ class ViewCell: UICollectionViewCell {
         
     }
     
-    func removeViewControllerFromParent() {
+    open func removeViewControllerFromParent() {
         
         guard let controller = currentViewController else {
             print("currentViewController is nil. Aborting removeViewControllerFromParent inside ViewCell.")
@@ -64,7 +64,7 @@ class ViewCell: UICollectionViewCell {
         
     }
     
-    func setupCell(view: UIView) {
+    open func setupCell(view: UIView) {
         self.currentView = view
         
         addSubview(view)
@@ -78,10 +78,10 @@ class ViewCell: UICollectionViewCell {
 
 
 
-class LabelHeaderCell: UICollectionViewCell {
+open class LabelHeaderCell: UICollectionViewCell {
     
-//MARK: Properties
-    var titleColor: UIColor {
+    //MARK: Properties
+    open var titleColor: UIColor {
         get {
             return label.textColor
         }
@@ -90,31 +90,31 @@ class LabelHeaderCell: UICollectionViewCell {
         }
     }
     
-//MARK: Initializers
-    override init(frame: CGRect) {
+    //MARK: Initializers
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(label)
         label.anchorBottom(padding: -8)
         label.alignHorizontallyCenter()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-//MARK: Life Cycle Methods
-    override func prepareForReuse() {
+    //MARK: Life Cycle Methods
+    open override func prepareForReuse() {
         super.prepareForReuse()
         label.textColor = .adaptiveTertiaryLabel
     }
     
-//MARK: Methods
-    func setupHeader(title: String, selected: Bool) {
+    //MARK: Methods
+    open func setupHeader(title: String, selected: Bool) {
         label.text = title
         label.textColor = selected ? .adaptiveLabel : .adaptiveTertiaryLabel
     }
     
-//MARK: Views and Constraints
+    //MARK: Views and Constraints
     private lazy var label: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
