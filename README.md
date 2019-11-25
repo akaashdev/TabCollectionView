@@ -5,11 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/TabCollectionView.svg?style=flat)](https://cocoapods.org/pods/TabCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/TabCollectionView.svg?style=flat)](https://cocoapods.org/pods/TabCollectionView)
 
-![Alt Text](https://github.com/akaashdev/SheetKit/blob/master/Screenshots/screen-record-iphone-1.gif)
+![Alt Text](https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-iphone-1.gif)
 
 Tabbed Screens are one of most popular designs followed to show multiple pages on a single screen neatly. With **UIKit** this component doesn't come for free.  **TabCollectionView** helps you create complex Tabbed Screens with just few lines of code. **TabCollectionView** is completely written on Swift and is very light as it is based on UICollectionView under the hood. **TabCollectionView** supports lazy loading of ViewController giving you flexibility of controlling the memory. It uses delegation architecture just like any other Collection data based View of UIKit, so its easy to adapt and implement.
 
-![Alt Text](https://github.com/akaashdev/SheetKit/blob/master/Screenshots/screen-record-ipad-1.gif)
+![Alt Text](https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-1.gif)
 
 Kick in and start swiping!!
 
@@ -129,7 +129,7 @@ class ViewController: UIViewController, TabCollectionViewDataSource {
 TabCollectionView is completely adaptive to screen size changes automatically. 
 For force layout updates, just call **reloadLayout()** method of **TabCollectionView**
 
-![Alt Text](https://github.com/akaashdev/SheetKit/blob/master/Screenshots/screen-record-ipad-2.gif)
+![Alt Text](https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-2.gif)
 
 ## Author
 
