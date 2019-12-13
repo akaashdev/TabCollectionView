@@ -1,20 +1,25 @@
 {
   "name": "TabCollectionView",
-  "version": "0.1.0",
-  "summary": "A short description of TabCollectionView.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.1.1",
+  "summary": "A Light-weight Swift Library that mimics ViewPager of Android in iOS in the simplest and efficient way",
+  "description": "A Light-weight Swift Library that mimics ViewPager of Android in iOS in the simplest and efficient way. TabCollectionView can be used like any other View of UIKit. It follows the same architecture and delegation pattern.",
   "homepage": "https://github.com/akaashdev/TabCollectionView",
+  "screenshots": [
+    "https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-iphone-1.gif",
+    "https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-1.gif"
+  ],
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Akaash Dev": "akaashdev.sc@zohocorp.com"
+    "Akaash Dev": "heatblast.akaash@gmail.com"
   },
   "source": {
     "git": "https://github.com/akaashdev/TabCollectionView.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
+  "social_media_url": "https://twitter.com/akaash_dev",
   "platforms": {
     "ios": "11.0"
   },

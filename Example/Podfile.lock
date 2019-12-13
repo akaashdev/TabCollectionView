@@ -1,5 +1,5 @@
 PODS:
-  - TabCollectionView (0.1.0)
+  - TabCollectionView (0.1.1)
 
 DEPENDENCIES:
   - TabCollectionView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TabCollectionView: e751e49adba4b878ad7fa272cea285374182050e
+  TabCollectionView: 2d3c0b3dd4b2163cabbd8d78df0ea4222d30ea8b
 
 PODFILE CHECKSUM: 143aea43d1ff2752b90c55bb38e3f78d7977f67a
 

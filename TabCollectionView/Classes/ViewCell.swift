@@ -81,14 +81,8 @@ open class ViewCell: UICollectionViewCell {
 open class LabelHeaderCell: UICollectionViewCell {
     
     //MARK: Properties
-    open var titleColor: UIColor {
-        get {
-            return label.textColor
-        }
-        set {
-            label.textColor = newValue
-        }
-    }
+    private (set) public var normalHeaderColor: UIColor = .adaptiveTertiaryLabel
+    private (set) public var selectedHeaderColor: UIColor = .adaptiveLabel
     
     //MARK: Initializers
     public override init(frame: CGRect) {
@@ -112,6 +106,19 @@ open class LabelHeaderCell: UICollectionViewCell {
     open func setupHeader(title: String, selected: Bool) {
         label.text = title
         label.textColor = selected ? .adaptiveLabel : .adaptiveTertiaryLabel
+    }
+    
+    open func setTransitioningDelta(_ delta: CGFloat) {
+        label.textColor = getTransitioningColor(delta: delta)
+    }
+    
+    //MARK: Private Methods
+    private func getTransitioningColor(delta: CGFloat) -> UIColor {
+        return Utils.getTransitioningColor(
+            from: selectedHeaderColor,
+            to: normalHeaderColor,
+            delta: delta
+        )
     }
     
     //MARK: Views and Constraints

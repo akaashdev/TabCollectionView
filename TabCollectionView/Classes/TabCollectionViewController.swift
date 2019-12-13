@@ -82,9 +82,9 @@ open class TabCollectionViewController: UIViewController, TabCollectionViewDataS
         return CGFloat(title(at: index).count * 12 + 30)
     }
     
-    open func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningColor color: UIColor, forHeader header: UICollectionViewCell) {
+    open func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningDelta delta: CGFloat, forHeader header: UICollectionViewCell) {
         if let header = header as? LabelHeaderCell {
-            header.titleColor = color
+            header.setTransitioningDelta(delta)
         }
     }
     

@@ -29,7 +29,7 @@ public protocol TabCollectionViewDelegate: ClassProtocol {
     func tabCollectionView(_ tabCollectionView: TabCollectionView, widthForHeaderAt index: Int) -> CGFloat
     func tabCollectionView(_ tabCollectionView: TabCollectionView, willDisplay contentCell: UICollectionViewCell, inContent collectionView: UICollectionView, forItemAt index: Int)
     func tabCollectionView(_ tabCollectionView: TabCollectionView, didEndDisplaying contentCell: UICollectionViewCell, inContent collectionView: UICollectionView, forItemAt index: Int)
-    func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningColor color: UIColor, forHeader header: UICollectionViewCell)
+    func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningDelta delta: CGFloat, forHeader header: UICollectionViewCell)
 }
 
 public extension TabCollectionViewDelegate {
@@ -43,7 +43,7 @@ public extension TabCollectionViewDelegate {
     func tabCollectionView(_ tabCollectionView: TabCollectionView, didEndDisplaying contentCell: UICollectionViewCell, inContent collectionView: UICollectionView, forItemAt index: Int)
     {  }
     
-    func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningColor color: UIColor, forHeader header:
+    func tabCollectionView(_ tabCollectionView: TabCollectionView, transitioningDelta delta: CGFloat, forHeader header:
         UICollectionViewCell)
     {  }
 }
@@ -289,11 +289,11 @@ public class TabCollectionView: UIView, UICollectionViewDelegateFlowLayout, UICo
         )
         
         if let header = tabHeaderCollectionView_.cellForItem(at: indexPath(for: leftTab)) {
-            delegate.tabCollectionView(self, transitioningColor: getTransitioningColor(delta: translationRatio), forHeader: header)
+            delegate.tabCollectionView(self, transitioningDelta: translationRatio, forHeader: header)
         }
         
         if let header = tabHeaderCollectionView_.cellForItem(at: indexPath(for: rightTab)) {
-            delegate.tabCollectionView(self, transitioningColor: getTransitioningColor(delta: 1 - translationRatio), forHeader: header)
+            delegate.tabCollectionView(self, transitioningDelta: 1 - translationRatio, forHeader: header)
         }
     }
     
@@ -304,15 +304,7 @@ public class TabCollectionView: UIView, UICollectionViewDelegateFlowLayout, UICo
         }
     }
     
-    //MARK: Private Methods
-    private func getTransitioningColor(delta: CGFloat) -> UIColor {
-        return Utils.getTransitioningColor(
-            from: selectedHeaderColor,
-            to: normalHeaderColor,
-            delta: delta
-        )
-    }
-    
+    //MARK: Private Methods    
     private func updateTabHeaderLayout() {
         // As this method is used in didSet of properties
         // Ignoring unneccessory layout update calls before moving to window
