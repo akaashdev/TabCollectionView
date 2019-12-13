@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
                       'https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-1.gif'
                       'https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-2.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Akaash Dev' => 'akaashdev.sc@zohocorp.com' }
+  s.author           = { 'Akaash Dev' => 'heatblast.akaash@gmail.com' }
   s.source           = { :git => 'https://github.com/akaashdev/TabCollectionView.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/akaash_dev'
 
