@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TabCollectionView'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A Light-weight Swift Library that mimics ViewPager of Android in iOS in the simplest and efficient way'
 
 # This description is used to generate tags and improve search results.
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/akaashdev/TabCollectionView'
-  s.screenshots     = 'https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-iphone-1.gif',
-                      'https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-1.gif'
-                      'https://github.com/akaashdev/TabCollectionView/blob/master/Screenshots/screen-record-ipad-2.gif'
+  s.screenshots     = 'https://raw.githubusercontent.com/akaashdev/TabCollectionView/master/Screenshots/screen-record-iphone-1.gif',
+                      'https://raw.githubusercontent.com/akaashdev/TabCollectionView/master/Screenshots/screen-record-ipad-1.gif',
+                      'https://raw.githubusercontent.com/akaashdev/TabCollectionView/master/Screenshots/screen-record-ipad-2.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Akaash Dev' => 'heatblast.akaash@gmail.com' }
   s.source           = { :git => 'https://github.com/akaashdev/TabCollectionView.git', :tag => s.version.to_s }
